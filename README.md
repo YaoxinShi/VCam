@@ -2,15 +2,13 @@
 
 It uses DirectShow filters for grabing video frames from real camera device, processing them and passing to the virtual camera.
 
-# Dependencies
-
-OpenCV (I've used OpenCV 4.4.0-openvino)
-
 # Build
 
-CMake, choose VS2019 & Win32
-
-set OpenCV_DIR as "C:\Program Files (x86) IntelSWTools\openvino\opencv\cmake\"
+CMake
+* Create a folder named "build"
+* Set "source" as .../VCam, "binary" as .../VCam/build
+* Configure, choose VS2019 & Win32
+* Generate & Open project
 
 # Run
 
@@ -28,7 +26,7 @@ set OpenCV_DIR as "C:\Program Files (x86) IntelSWTools\openvino\opencv\cmake\"
 ## Use virtual camera in Skype
 
 * If Skpye is 32-bit, use 32-bit VCam. If Skpye is 64-bit, use 64-bit VCam.
-* Register virtual camera when Skype is turned off.
+* Turned off Skpye and turn on (to make sure the newly added virtual camera is noticed by Skype).
 * Skype >> Options >> Video settings
 * On the tab "Video Device" select: "FakeFace Virtual Cam"
 * Since VirtualCamManager.exe hasn't been started. You will see noisy pixels (random value).
