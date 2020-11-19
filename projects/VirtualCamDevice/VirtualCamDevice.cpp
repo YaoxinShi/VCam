@@ -42,16 +42,16 @@ const double    c_fps = 20;
 const double    c_nMinFPS = 1;
 const double    c_nMaxFPS = 30;
 //
-const int       c_iFormatsCount = 8;
-const int       c_iDefaultWidth = 640;//1024;
-const int       c_iDefaultHeight = 480;//756;
-const int       c_nGranularityW = 80;//160;
-const int       c_nGranularityH = 60;//120;
-const int       c_nMinWidth = 80;//320;
-const int       c_nMinHeight = 60;//240;
-const int       c_nMaxWidth = c_nMinWidth + c_nGranularityW * (c_iFormatsCount - 1);
-const int       c_nMaxHeight = c_nMinHeight + c_nGranularityH * (c_iFormatsCount - 1);
-const int       c_nDefaultBitCount = 24;
+const int       c_iFormatsCount = 1; // only support one resolution: 1280x720. Otherwise DShow may negotiate to an unexpetced resolution, and then cause the pitch error during render.
+const int       c_iDefaultWidth = 1280;//same as raw camera on my laptop
+const int       c_iDefaultHeight = 720;//same as raw camera on my laptop
+const int       c_nGranularityW = 160;//since only support one resolution, so Granularity is useless
+const int       c_nGranularityH = 90;//since only support one resolution, so Granularity is useless
+const int       c_nMinWidth = 1280;//only support one resolution: 1280x720
+const int       c_nMinHeight = 720;//only support one resolution: 1280x720
+const int       c_nMaxWidth = c_nMinWidth + c_nGranularityW * (c_iFormatsCount - 1); // =1280
+const int       c_nMaxHeight = c_nMinHeight + c_nGranularityH * (c_iFormatsCount - 1); // =720
+const int       c_nDefaultBitCount = 24; //RGB888
 /*
     Function Declarations
 */

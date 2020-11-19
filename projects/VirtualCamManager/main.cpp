@@ -113,9 +113,9 @@ public:
         }
         //*/
 
-        // override camera data with a 640x480 bmp
+        // override camera data with a 1280x720 bmp (as the raw camera on my laptop is 1280x720)
         /*
-        HBITMAP hBmp = (HBITMAP) LoadImage( NULL, L"1.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
+        HBITMAP hBmp = (HBITMAP) LoadImage( NULL, L"1280x720.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
         if (hBmp != NULL)
         {
             int ReadLen = GetBitmapBits(hBmp, lDataLen, pData);
